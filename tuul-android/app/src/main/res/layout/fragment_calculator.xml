@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/calculator_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/calculator_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:titleTextColor="@color/white"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="@string/toolbar_title"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout
+            android:id="@+id/classifier_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintTop_toBottomOf="@id/calculator_toolbar"
+            app:layout_constraintBottom_toTopOf="@id/division_group"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+                android:text="@string/classifier_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/classifier_title"
+                tools:text="Classifier:"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textStyle="bold"/>
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/classifierSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:background="@drawable/spinner_background"
+                android:layout_weight="3"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/division_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintTop_toBottomOf="@id/classifier_group"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/hhf_group">
+        <TextView
+                android:text="@string/division_title"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:id="@+id/division_title"
+                tools:text="Division:"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textStyle="bold"/>
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/divisionSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:background="@drawable/spinner_background"
+                android:layout_weight="3"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/hhf_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintTop_toBottomOf="@id/division_group"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/hhf_value">
+        <TextView
+                android:text="@string/hhf_title"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:id="@+id/hhf_title"
+                tools:text="Hit Factor:"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textStyle="bold"/>
+
+        <EditText
+                android:id="@+id/hhfField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_weight="3"
+                android:inputType="numberDecimal"/>
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hhf_value"
+            android:text="HHF: 10.556"
+            app:layout_constraintTop_toBottomOf="@id/hhf_group"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/percent_value"
+            android:layout_marginRight="16dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginEnd="16dp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/percent_value"
+            android:text="45.87%"
+            android:textSize="15dp"
+            app:layout_constraintTop_toBottomOf="@id/hhf_value"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/letter_value"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/letter_value"
+            android:includeFontPadding="false"
+            android:text="D"
+            android:textSize="150dp"
+            app:layout_constraintTop_toBottomOf="@id/percent_value"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/result_information"/>
+
+    <LinearLayout
+            android:id="@+id/result_information"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:weightSum="90"
+            app:layout_constraintTop_toBottomOf="@id/letter_value"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/adView"
+            android:textStyle="bold"
+            android:textSize="16sp">
+
+        <TextView
+                android:id="@+id/d_percentage_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="15"
+                android:gravity="center_vertical"
+                android:text="D: 0.000"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+
+        <TextView
+                android:id="@+id/c_percentage_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="15"
+                android:gravity="center_vertical"
+                android:text="C: "
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+
+        <TextView
+                android:id="@+id/b_percentage_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="15"
+                android:gravity="center_vertical"
+                android:text="B: "
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+
+        <TextView
+                android:id="@+id/a_percentage_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="15"
+                android:gravity="center_vertical"
+                android:text="A: "
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+
+        <TextView
+                android:id="@+id/m_percentage_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="15"
+                android:gravity="center_vertical"
+                android:text="M: "
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+
+        <TextView
+                android:id="@+id/g_percentage_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="15"
+                android:gravity="center_vertical"
+                android:text="G: "
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Range Tuul</string>
+    <string name="toolbar_title">Range Tuul</string>
+    <string name="title_calculator">Calculator</string>
+    <string name="title_classifiers">Classifiers</string>
+    <string name="title_rules">Rules</string>
+    <string name="classifier_title">Classifier:</string>
+    <string name="division_title">Division:</string>
+    <string name="hhf_title">Hit Factor:</string>
+    <string name="d_class_label">D</string>
+    <string name="c_class_label">C</string>
+    <string name="b_class_label">B</string>
+    <string name="a_class_label">A</string>
+    <string name="m_class_label">M</string>
+    <string name="g_class_label">G</string>
+    <string name="open_in_other_app_title">Open in Other App</string>
+    <string name="open_in_external_app">Open in External App</string>
+    <string name="print">Print</string>
+    <string name="title_activity_settings">Settings</string>
+</resources>

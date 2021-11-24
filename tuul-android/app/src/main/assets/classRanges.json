@@ -1,0 +1,45 @@
+[
+  {
+    "classification": "GM",
+    "highPercent": "999",
+    "indx": "1",
+    "lowPercent": "95",
+    "sequence": "1"
+  },
+  {
+    "classification": "M",
+    "highPercent": "95",
+    "indx": "2",
+    "lowPercent": "85",
+    "sequence": "2"
+  },
+  {
+    "classification": "A",
+    "highPercent": "85",
+    "indx": "3",
+    "lowPercent": "75",
+    "sequence": "3"
+  },
+  {
+    "classification": "B",
+    "highPercent": "75",
+    "indx": "4",
+    "lowPercent": "60",
+    "sequence": "4"
+  },
+  {
+    "classification": "C",
+    "highPercent": "60",
+    "indx": "5",
+    "lowPercent": "40",
+    "sequence": "5"
+  },
+  {
+    "classification": "D",
+    "highPercent": "40",
+    "indx": "6",
+    "lowPercent": "0",
+    "sequence": "6"
+  }
+]
+

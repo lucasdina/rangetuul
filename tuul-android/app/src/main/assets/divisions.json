@@ -1,0 +1,42 @@
+[
+  {
+    "id": "2",
+    "longName": "Open",
+    "shortName": "OPN"
+  },
+  {
+    "id": "3",
+    "longName": "Limited",
+    "shortName": "LTD"
+  },
+  {
+    "id": "4",
+    "longName": "Limited 10",
+    "shortName": "L10"
+  },
+  {
+    "id": "5",
+    "longName": "Production",
+    "shortName": "PROD"
+  },
+  {
+    "id": "6",
+    "longName": "Revolver",
+    "shortName": "REV"
+  },
+  {
+    "id": "7",
+    "longName": "Single Stack",
+    "shortName": "SS"
+  },
+  {
+    "id": "35",
+    "longName": "Carry Optics",
+    "shortName": "CO"
+  },
+  {
+    "id": "38",
+    "longName": "PCC",
+    "shortName": "PCC"
+  }
+]

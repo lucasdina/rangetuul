@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.gunnr.tuul">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            tools:ignore="GoogleAppIndexingWarning">
+        <activity
+                android:name=".Settings"
+                android:label="@string/title_activity_settings"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <provider
+                android:name="androidx.core.content.FileProvider"
+                android:authorities="${applicationId}.fileprovider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/filepaths"/>
+        </provider>
+
+        <activity
+                android:name=".MainActivity"
+                android:label="@string/app_name"
+                android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <meta-data
+                android:name="io.fabric.ApiKey"
+                android:value="406c8e4a056d6650f87b968b16aa89d5b69a0c97"/>
+        <meta-data
+                android:name="com.google.android.gms.ads.APPLICATION_ID"
+                android:value="ca-app-pub-2283335961067006~8091548485"/>
+
+        <provider
+                android:name="com.commonsware.cwac.provider.StreamProvider"
+                android:authorities="com.gunnr.tuul"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="com.commonsware.cwac.provider.STREAM_PROVIDER_PATHS"
+                    android:resource="@xml/paths"/>
+        </provider>
+    </application>
+
+</manifest>
